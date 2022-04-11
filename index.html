@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC-Nordbund | Shop</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body id="shop">
+</body>
+<script src="https://nordbund.myspreadshop.net/js/shopclient.nocache.js" defer></script>
+<script>
+    window.spread_shop_config = {
+        shopName: 'nordbund',
+        locale: 'de_DE',
+        prefix: 'https://nordbund.myspreadshop.de',
+        baseId: 'shop',
+        swipeMenu: true,
+    }
+    const int = setInterval(() => {
+        const el = document.getElementById('consent-reject')
+        if (el) {
+            clearInterval(int)
+            el.click()
+        }
+    }, 100);
+</script>
+</html>
