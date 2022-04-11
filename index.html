@@ -25,5 +25,18 @@
             el.click()
         }
     }, 100);
+
+    function sendHeight(params) {
+        window.postMessage({
+            'height': document.body.scrollHeight
+        })
+    }
+
+    const ob = new ResizeObserver(() => {
+        sendHeight()
+    })
+
+    ob.observe(document.body)
+    sendHeight()
 </script>
 </html>
